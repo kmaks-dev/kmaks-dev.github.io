@@ -6,9 +6,9 @@ tags: [password]     # TAG names should always be lowercase
 mermaid: true
 description: The following post runs through the process of writing VNC password encryption and decryption scripts.
 image:
-  path: /img/posts/vncpassword.png
+  path: /assets/img/posts/vncpassword.png
 ---
-!(/assets/img/sample/mockup.png){: .shadow }
+!(/assets/img/posts/vncpassword.png){: .shadow }
 ## The why - Backstory
 Dating almost a decade ago when I still was dealing with end-user support I wrote a batch script to install and uninstall a Tight VNC server service with a configuration of my own. Sadly VNC passwords are pretty weak as they are only up to 8 characters long and are only obfuscated not encrypted. I'm in no way ecouraging anyone to use it in a production environment. However I find it a good last resort solution if I have to support industry production machines running Windows with only touchscreen HIDs.
 

@@ -2,21 +2,20 @@
 title: VNC Password Encription
 date: 2025-05-02 10:15:00 +0200
 categories: [PowerShell, VNC]
-tags: [password]     # TAG names should always be lowercase
+tags: [password]
 mermaid: true
 description: The following post runs through the process of writing VNC password encryption and decryption scripts.
 image:
   path: /img/posts/vncpassword.png
 ---
-!(/assets/img/sample/mockup.png){: .shadow }
-## The why - Backstory
+## Brief backstory
 Dating almost a decade ago when I still was dealing with end-user support I wrote a batch script to install and uninstall a Tight VNC server service with a configuration of my own. Sadly VNC passwords are pretty weak as they are only up to 8 characters long and are only obfuscated not encrypted. I'm in no way ecouraging anyone to use it in a production environment. However I find it a good last resort solution if I have to support industry production machines running Windows with only touchscreen HIDs.
 
 Since the configuration I was deploying along side the binary was always the same I wanted to randomize it during installation, however my skills were insufficient back then.
 
 Although not particularly needed today, I wanted to revisit this old idea and use PowerShell to encrypt and decrypt VNC passwords.
 
-## The how - building a script
+## Building a script
 VNC Passwords use electronic codebook encription (ECB) which is a mode of Data Encription Standard (DES) dating back to 1975. Thankfully this is fully implemented by `System.Security.Cryptography.DESCryptoServiceProvider` hence there is no need to code this part. Now ECB requires a set of decrypted bytes and an encryption key and it will return a different set of bytes. Each byte is then split into two nibbles (4-bits). A nibble can have a value between 0-15. Then each nibble is used to read a char from 0 to F.
 
 ```mermaid

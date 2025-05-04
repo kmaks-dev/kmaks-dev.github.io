@@ -1,5 +1,5 @@
 ---
-title: VNC Password Encription
+title: VNC Password Encryption
 date: 2025-05-02 10:15:00 +0200
 categories: [PowerShell, VNC]
 tags: [password]

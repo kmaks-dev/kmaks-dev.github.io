@@ -154,4 +154,4 @@ Since we accept multiple paths by both the pipeline and via `-Path` parameter it
 
 Did dropping everything except paths result in faster performance? Here's the performance tests.
 
-(/assets/img/posts/Get-FileSystemItemPaths.png){: .w-75 .shadow .rounded-10 }
+!(/assets/img/posts/Get-FileSystemItemPaths.png){: .w-75 .shadow .rounded-10 }

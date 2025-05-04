@@ -1,5 +1,5 @@
 ---
-title: VNC Password Encription
+title: Enumerate files but faster
 date: 2025-05-03 12:31:00 +0200
 categories: [PowerShell, Script]
 tags: [powershell, filesystem, file]     # TAG names should always be lowercase
